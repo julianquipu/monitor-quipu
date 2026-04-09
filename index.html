@@ -49,6 +49,18 @@
     .img-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.img-wall img{width:100%;height:116px;object-fit:cover;border-radius:18px}
     .palette{display:flex;gap:10px;flex-wrap:wrap}.sw{width:54px;height:54px;border-radius:16px;border:1px solid #dce8e4}
     .footer-note{padding:24px 0 46px;color:#7a8a89;font-size:14px}
+    @media (max-width:1280px){
+  .board-shell{grid-template-columns:200px 1fr}
+  .tab-head h2{font-size:30px}
+  .headline{font-size:clamp(32px,4vw,52px)}
+  h1{font-size:clamp(38px,6vw,72px)}
+  .g4{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1100px){
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .board-top{flex-direction:column;align-items:flex-start;gap:10px}
+  .tab-head{flex-direction:column}
+}
     @media (max-width:1100px){.hero,.board-shell{grid-template-columns:1fr}.metric-strip,.g4,.g3{grid-template-columns:1fr 1fr}.sidebar{order:2}.content{order:1}}
     @media (max-width:700px){.container{width:min(100% - 20px,1280px)}.metric-strip,.g4,.g3,.g2,.img-wall{grid-template-columns:1fr}.tab-head{flex-direction:column}.tab-head h2{font-size:30px}h1{font-size:46px}.board{padding:12px}.content{padding:14px}}
   </style>
