@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///Users/analuciaesv/Downloads/monitor-salud-financiera-2.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor de Salud Financiera - Quipu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Monitor de Salud Financiera - Quipu_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#062b2b; --bg-2:#0d3a38; --panel:#0f6f6b; --panel-2:#0c5855; --mint:#bce9dc; --mint-2:#dff5ee;
+      --text:#f5fbf8; --dark:#0a1111; --muted:#a8c8c1; --line:rgba(255,255,255,.14); --shadow:0 24px 70px rgba(0,0,0,.28);
+      --accent:#f08b73; --accent-2:#ffd166; --ok:#74d3ae; --warn:#ffb36b; --danger:#ff7f7f; --card:#ffffff;
+      --ink:#161818; --ink-2:#4e5656; --soft:#f6faf8; --radius:28px; --radius-sm:18px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Outfit',system-ui,sans-serif;background:linear-gradient(180deg,var(--bg) 0%, #071d1d 100%);color:var(--text)}
+    img{max-width:100%;display:block} button{font:inherit} .container{width:min(1280px,calc(100% - 40px));margin:0 auto}
+    .hero-wrap{position:relative;overflow:hidden;background:radial-gradient(circle at 18% 8%, rgba(111,196,173,.18), transparent 24%),radial-gradient(circle at 75% 10%, rgba(255,255,255,.08), transparent 16%),linear-gradient(120deg,#072627 0%, #103f3b 45%, #082728 100%)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.brand{display:flex;align-items:center;gap:14px;font-weight:700}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(180deg,#9ad9c8,#0f6f6b);position:relative;box-shadow:var(--shadow)}
+    .logo:before,.logo:after{content:"";position:absolute;background:#fff;border-radius:999px}.logo:before{width:8px;height:20px;left:18px;top:10px}.logo:after{width:26px;height:8px;left:9px;bottom:10px}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(188,233,220,.08);color:var(--mint);font-size:14px}
+    .hero{display:grid;grid-template-columns:1.06fr .94fr;gap:32px;align-items:center;padding:26px 0 56px}
+    h1{font-size:clamp(44px,7vw,82px);line-height:.98;margin:14px 0 16px;letter-spacing:-.045em;max-width:11ch}
+    .lead{font-size:21px;line-height:1.45;color:#dceee8;max-width:58ch;margin-bottom:22px}
+    .btn-row{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:15px 20px;border-radius:16px;border:none;font-weight:700;font-size:15px}.btn-primary{background:linear-gradient(180deg,#1ea39a,#0f6f6b);color:#fff;box-shadow:var(--shadow)} .btn-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18)}
+    .metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.mini{padding:16px 18px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.04)} .mini b{display:block;font-size:28px}.mini span{color:var(--muted);font-size:14px}
+    .board{background:#edf6f2;border-radius:34px;padding:18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 90px rgba(0,0,0,.32);color:var(--ink)}
+    .board-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.board-top .left{font-weight:700}.board-shell{display:grid;grid-template-columns:240px 1fr;gap:14px;min-height:720px}
+    .sidebar{background:linear-gradient(180deg,#083433,#0a2828);color:#eaf6f1;border-radius:24px;padding:18px}.side-item{display:flex;align-items:center;gap:12px;padding:14px 12px;border-radius:16px;color:#cfe6df;margin-bottom:8px;cursor:pointer;border:1px solid transparent}
+    .side-item.active{background:rgba(188,233,220,.1);border-color:rgba(188,233,220,.18);color:#fff}.side-item .num{width:28px;height:28px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:13px;font-weight:700}
+    .side-foot{margin-top:20px;padding:14px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:13px;color:#c7ded8;line-height:1.45}
+    .content{background:#f7fbfa;border-radius:24px;padding:18px}.tab{display:none}.tab.active{display:block}.tab-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:16px}.tab-head h2{font-size:38px;line-height:1;letter-spacing:-.04em;margin:0}.tab-head p{margin:8px 0 0;color:#627070;max-width:60ch;line-height:1.45}
+    .header-chip{padding:10px 14px;border-radius:999px;background:#dff5ee;color:#11645d;font-weight:700;font-size:13px;white-space:nowrap}
+    .grid{display:grid;gap:14px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #e3ece8;border-radius:22px;padding:18px;box-shadow:0 16px 40px rgba(6,43,43,.05)} .dark{background:linear-gradient(135deg,#0f6f6b,#083634);color:#fff;border:none}
+    .score-card{padding:22px;border-radius:26px;background:linear-gradient(135deg,#0f6f6b,#073b3a);color:#fff;box-shadow:var(--shadow)} .score-flex{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    .score-num{font-size:86px;line-height:.9;font-weight:800;letter-spacing:-.05em}.score-sub{color:#d3ece5}.trend{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px}
+    .pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pill{padding:8px 10px;border-radius:999px;font-size:12px;font-weight:700}.ok{background:#daf6ea;color:#0a6b47}.warn{background:#fff0d8;color:#9a5d00}.danger{background:#ffe0df;color:#a13b3b}
+    .k{font-size:12px;color:#6b7676;text-transform:uppercase;letter-spacing:.08em}.v{font-size:30px;font-weight:800;letter-spacing:-.03em;margin-top:4px}.muted{color:#667070;line-height:1.45}
+    .bar{height:10px;background:#e7efec;border-radius:999px;overflow:hidden;margin-top:8px}.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#f08b73,#0f8a82)}
+    .event{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #edf2ef}.event:last-child{border-bottom:none}.event .left{display:flex;gap:12px}.dot{width:12px;height:12px;border-radius:50%;margin-top:6px}
+    table{width:100%;border-collapse:collapse} th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf2ef;font-size:14px} th{color:#647171;font-weight:700} .badge{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;display:inline-block}
+    .state-stable{background:#daf6ea;color:#0a6b47}.state-fragile{background:#fff0d8;color:#9a5d00}.state-critical{background:#ffe0df;color:#a13b3b}.state-growth{background:#dff3ff;color:#16507c}
+    .oracle{background:linear-gradient(135deg,#082c2c,#061c1c);color:#fff;border:none}.oracle h3{font-size:30px;line-height:1.05;letter-spacing:-.03em;margin:0 0 10px}.oracle-step{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)} .oracle-step:last-child{border-bottom:none}
+    .bubble{width:34px;height:34px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-weight:800}
+    .section{padding:82px 0;background:#f7fbfa;color:var(--ink)} .section.darksec{background:linear-gradient(180deg,#082c2c,#061c1c);color:#fff} .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#dff5ee;color:#11645d;font-weight:700;font-size:14px}
+    .headline{font-size:clamp(38px,5vw,62px);line-height:1;letter-spacing:-.045em;margin:16px 0 16px;max-width:12ch}.sub{font-size:21px;color:#5c6868;max-width:48ch;line-height:1.45}
+    .img-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.img-wall img{width:100%;height:116px;object-fit:cover;border-radius:18px}
+    .palette{display:flex;gap:10px;flex-wrap:wrap}.sw{width:54px;height:54px;border-radius:16px;border:1px solid #dce8e4}
+    .footer-note{padding:24px 0 46px;color:#7a8a89;font-size:14px}
+    @media (max-width:1100px){.hero,.board-shell{grid-template-columns:1fr}.metric-strip,.g4,.g3{grid-template-columns:1fr 1fr}.sidebar{order:2}.content{order:1}}
+    @media (max-width:700px){.container{width:min(100% - 20px,1280px)}.metric-strip,.g4,.g3,.g2,.img-wall{grid-template-columns:1fr}.tab-head{flex-direction:column}.tab-head h2{font-size:30px}h1{font-size:46px}.board{padding:12px}.content{padding:14px}}
+  </style>
+<script src="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/assets/main-world.ts-B0-0X4eu.js" type="module"></script></head>
+<body data-demoway-document-id="ckmcp2j81vbjnwlah32p9gse">
+  <header class="hero-wrap">
+    <div class="container">
+      <nav class="nav">
+        <div class="brand"><div class="logo"></div><div>QuipuScore<br><span style="font-weight:400;color:var(--muted)">Monitor de Salud Financiera</span></div></div>
+        <div class="tag">Versión 1.0 • Demo Navegable</div>
+      </nav>
+      <section class="hero">
+        <div>
+          <span class="tag">SMS-first • señales alternativas • tiempo real</span>
+          <h1>Del dato alternativo al siguiente mejor movimiento</h1>
+          <p class="lead">Una infraestructura que observa el presente, aprende con cada interacción y conecta a las personas con mejores productos financieros.</p>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="activateTab(&#39;perfil&#39;)">Abrir demo</button>
+            <button class="btn btn-secondary" onclick="document.getElementById(&#39;demo&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Ver navegación</button>
+          </div>
+          <div class="metric-strip">
+            <div class="mini"><b>4</b><span>Tipo de análisis con decisiones clave</span></div>
+            <div class="mini"><b>SMS</b><span>Motor principal del health score</span></div>
+            <div class="mini"><b>7/30/90</b><span>Ventanas de tiempo sugeridas de seguimiento</span></div>
+            <div class="mini"><b>1</b><span>Oráculo para decidir la siguiente acción</span></div>
+          </div>
+        </div>
+        <div id="demo" class="board">
+          <div class="board-top">
+            <div class="left">Demo del Monitor</div>
+            <div class="tag" style="background:#dff5ee;color:#11645d;border:none">SDK / app blanca / aliado B2B</div>
+          </div>
+          <div class="board-shell">
+            <aside class="sidebar">
+              <div style="font-size:13px;color:#b6d7cf;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Navegación</div>
+              <div class="side-item active" data-tab="perfil"><div class="num">01</div><div><b>Perfil del cliente</b><div style="font-size:13px;color:#b6d7cf">Score vivo y explicabilidad</div></div></div>
+              <div class="side-item" data-tab="cohortes"><div class="num">02</div><div><b>Cohortes</b><div style="font-size:13px;color:#b6d7cf">Seguimiento segmentado</div></div></div>
+              <div class="side-item" data-tab="alertas"><div class="num">03</div><div><b>Alertas</b><div style="font-size:13px;color:#b6d7cf">Deterioro, mora, fraude</div></div></div>
+              <div class="side-item" data-tab="oraculo"><div class="num">04</div><div><b>Oráculo Quipu</b><div style="font-size:13px;color:#b6d7cf">Siguiente mejor acción</div></div></div>
+              <div class="side-foot">El monitor usa variables provenientes de las fuentes alternativas de información para estructurar señales de ingresos, gastos, puntualidad, contactabilidad, fraude, actividad del negocio e interacción digital.</div>
+            </aside>
+            <section class="content">
+              <div id="perfil" class="tab active">
+                <div class="tab-head">
+                  <div><h2>Perfil del cliente</h2><p>Vista individual para analistas, originación y seguimiento. Resume score, tendencia, subscores, explicabilidad y eventos recientes del usuario.</p></div>
+                  <div class="header-chip">SMS Score principal</div>
+                </div>
+                <div class="score-card">
+                  <div class="score-flex">
+                    <div>
+                      <div style="font-size:14px;color:#c8e6df">Cliente: Amparo Jiménez</div>
+                      <div class="score-num">725</div>
+                      <div class="score-sub">Estado actual: <b>estable con presión moderada</b></div>
+                    </div>
+                    <div class="trend">▲ +6 puntos / 30 días</div>
+                  </div>
+                  <div class="pill-row">
+                    <div class="pill ok">Estabilidad financiera 0.75</div>
+                    <div class="pill ok">Indicador contactabilidad 0.95</div>
+                    <div class="pill warn">Carga financiera 0.35</div>
+                    <div class="pill danger">Incidencias retrasos 2</div>
+                  </div>
+                </div>
+                <div class="grid g4" style="margin-top:14px">
+                  <div class="card"><div class="k">Ingreso total categorizado</div><div class="v">$2.5M</div><div class="muted">Ingresos_registrados</div></div>
+                  <div class="card"><div class="k">Gasto total categorizado</div><div class="v">$1.95M</div><div class="muted">Gastos_registrados</div></div>
+                  <div class="card"><div class="k">Balance financiero</div><div class="v">+$400k</div><div class="muted">Balance_obtenido</div></div>
+                  <div class="card"><div class="k">Ratio ingreso/gasto</div><div class="v">1.28</div><div class="muted">Cálculo_ingresos_gastos_flujo</div></div>
+                </div>
+                <div class="grid g2" style="margin-top:14px">
+                  <div class="card">
+                    <div class="k">Subscores del monitor</div>
+                    <div style="margin-top:10px">Estabilidad de ingresos<div class="bar"><div class="fill" style="width:72%"></div></div></div>
+                    <div style="margin-top:12px">Puntualidad de pago<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                    <div style="margin-top:12px">Presión financiera<div class="bar"><div class="fill" style="width:58%"></div></div></div>
+                    <div style="margin-top:12px">Contactabilidad<div class="bar"><div class="fill" style="width:95%"></div></div></div>
+                    <div style="margin-top:12px">Fraude / anomalías<div class="bar"><div class="fill" style="width:18%"></div></div></div>
+                  </div>
+                  <div class="card">
+                    <div class="k">Explicabilidad</div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--ok)"></div><div><b>Ingresos consistentes</b><div class="muted">Variables: smsfrecuenciaingresos, smsingresoadicional, smsdiversidadingresos</div></div></div><div>+8</div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--ok)"></div><div><b>Buen comportamiento de pago</b><div class="muted">Variables: buencomportamientopago, pagopuntualpulse</div></div></div><div>+6</div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--warn)"></div><div><b>Obligaciones fijas altas</b><div class="muted">Variables: obligacionesfijas, smscargafinanciera</div></div></div><div>-4</div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--danger)"></div><div><b>Eventos leves de mora</b><div class="muted">Variables: morapulse, cobranzapulse, smsincidenciasretrasos</div></div></div><div>-5</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="cohortes" class="tab">
+                <div class="tab-head">
+                  <div><h2>Cohortes</h2><p>Panel para comparar segmentos y ver dónde se concentra la mejora o el deterioro. Sirve para originación, aprendizaje de producto y monitoreo de impacto.</p></div>
+                  <div class="header-chip">Vista segmentada</div>
+                </div>
+                <div class="grid g4">
+                  <div class="card"><div class="k">Rechazados con potencial</div><div class="v">1,284</div><div class="muted">Score &gt; 60 tras 30 días de seguimiento</div></div>
+                  <div class="card"><div class="k">Nuevos sin historial</div><div class="v">3,906</div><div class="muted">Dependencia alta de señales SMS</div></div>
+                  <div class="card"><div class="k">Recurrentes estables</div><div class="v">2,114</div><div class="muted">Alta puntualidad y baja mora</div></div>
+                  <div class="card"><div class="k">Alerta temprana</div><div class="v">612</div><div class="muted">Caída abrupta de ingresos o flujo</div></div>
+                </div>
+                <div class="card" style="margin-top:14px">
+                  <table>
+                    <thead><tr><th>Cohorte</th><th>Score promedio</th><th>Tendencia 30d</th><th>Variable dominante</th><th>Acción sugerida</th></tr></thead>
+                    <tbody>
+                      <tr><td>Solicitantes rechazados</td><td>61</td><td>▲ +4</td><td>smsindicadorflujo</td><td>Revisión asistida</td></tr>
+                      <tr><td>Migrantes con actividad digital alta</td><td>66</td><td>▲ +7</td><td>smsindicadorcontactabilidad</td><td>Piloto flexible</td></tr>
+                      <tr><td>Clientes recurrentes</td><td>78</td><td>→ estable</td><td>pagopuntualpulse</td><td>Upsell cupo</td></tr>
+                      <tr><td>Usuarios con presión financiera</td><td>49</td><td>▼ -6</td><td>smscargafinanciera</td><td>Cobranza preventiva</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="grid g3" style="margin-top:14px">
+                  <div class="card"><div class="k">Top señal de mejora</div><div class="v" style="font-size:24px">Aumento en ingresos + puntualidad</div><div class="muted">Ana Cristina Fernández, Juan Sebastián Moreno</div></div>
+                  <div class="card"><div class="k">Top señal de deterioro</div><div class="v" style="font-size:24px">Caída de flujo + cobranza</div><div class="muted">Pedro Amador, Lina Urutia</div></div>
+                  <div class="card"><div class="k">Top oportunidad</div><div class="v" style="font-size:24px">Reintentar originación</div><div class="muted">Usuarios rechazados que mejoran 14-30 días: Juan Pérez, Lisandra Osorio</div></div>
+                </div>
+              </div>
+
+              <div id="alertas" class="tab">
+                <div class="tab-head">
+                  <div><h2>Alertas</h2><p>Centro operativo para priorizar deterioros, eventos de mora, riesgo de fraude y cambios abruptos de comportamiento. La idea es actuar antes del daño.</p></div>
+                  <div class="header-chip">Tiempo real</div>
+                </div>
+                <div class="grid g3">
+                  <div class="card dark"><div class="k" style="color:#c7e6df">Alertas críticas</div><div class="v" style="color:#fff">23</div><div class="muted" style="color:#d4ebe4">Severidad roja: mora, fraude o caída abrupta</div></div>
+                  <div class="card"><div class="k">Alertas de deterioro</div><div class="v">119</div><div class="muted">Presión financiera creciente</div></div>
+                  <div class="card"><div class="k">Alertas de recuperación</div><div class="v">44</div><div class="muted">Clientes que mejoran tras rechazo o mora</div></div>
+                </div>
+                <div class="card" style="margin-top:14px">
+                  <table>
+                    <thead><tr><th>Tipo</th><th>Cliente</th><th>Señal disparadora</th><th>Severidad</th><th>Acción</th></tr></thead>
+                    <tbody>
+                      <tr><td>Deterioro de flujo</td><td>U-1092</td><td>Ratio_Ingresos_Gastos cae 32%</td><td><span class="badge state-critical">Crítica</span></td><td>Contactar hoy</td></tr>
+                      <tr><td>Mora temprana</td><td>U-2214</td><td>Mora_pulse + Cobranza_pulse</td><td><span class="badge state-fragile">Media</span></td><td>Recordatorio + plan</td></tr>
+                      <tr><td>Fraude probable</td><td>U-1888</td><td>Phishing_sms + sudden_geographic_changes</td><td><span class="badge state-critical">Crítica</span></td><td>Bloqueo preventivo</td></tr>
+                      <tr><td>Mejora sostenida</td><td>U-3051</td><td>sms_estabilidad_ingresos sube 18%</td><td><span class="badge state-growth">Positiva</span></td><td>Ofrecer cupo</td></tr>
+                      <tr><td>Presión financiera</td><td>U-4060</td><td>sms_cargafinanciera &gt; 0.5</td><td><span class="badge state-fragile">Media</span></td><td>Revisar plazo</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="grid g2" style="margin-top:14px">
+                  <div class="card"><div class="k">Variables sugeridas para la cola de alertas</div><div class="muted" style="margin-top:10px">A partir de la data alternativa se pueden generar alertas y señales disparadoras que dependen de las variables estructuradas en el Score Quipu.</div></div>
+                  <div class="card"><div class="k">Regla de negocio</div><div class="muted" style="margin-top:10px">Si el score cae más de 8 puntos en 14 días o si la mora aparece junto con caída del flujo, elevar a intervención humana. Si mejora por 3 semanas, pasar a cola de reactivación.</div></div>
+                </div>
+              </div>
+
+              <div id="oraculo" class="tab">
+                <div class="tab-head">
+                  <div><h2>Oráculo Quipu</h2><p>La capa que transforma el monitor en decisión. No solo observa; recomienda qué hacer después con cada usuario, segmento o evento detectado.</p></div>
+                  <div class="header-chip">Next best action</div>
+                </div>
+                <div class="grid g2">
+                  <div class="card oracle">
+                    <h3>Recomendación principal</h3>
+                    <div style="font-size:18px;color:#d3e7e2;line-height:1.5">No rechazar definitivamente. Monitorear 14 días y reintentar con producto flexible.</div>
+                    <div class="oracle-step"><div class="bubble">1</div><div><b>Señales positivas</b><div style="color:#cfe4df">Ingresos constantes, contactabilidad alta y pagos puntuales.</div></div></div>
+                    <div class="oracle-step"><div class="bubble">2</div><div><b>Señales de cuidado</b><div style="color:#cfe4df">Carga financiera moderada y dos eventos leves de retraso.</div></div></div>
+                    <div class="oracle-step"><div class="bubble">3</div><div><b>Acción sugerida</b><div style="color:#cfe4df">Ofrecer monto menor, plazo corto y seguimiento semanal.</div></div></div>
+                  </div>
+                  <div class="card">
+                    <div class="k">Biblioteca de acciones del oráculo</div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--ok)"></div><div><b>Upsell</b><div class="muted">Subir cupo o renovar si el score mejora y la puntualidad se sostiene.</div></div></div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--warn)"></div><div><b>Esperar y observar</b><div class="muted">No aprobar aún; monitorear 7-14 días hasta confirmar estabilidad.</div></div></div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:var(--danger)"></div><div><b>Activar cobranza preventiva</b><div class="muted">Contactar antes de mora severa cuando hay caída de flujo.</div></div></div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:#8fd1ff"></div><div><b>Pedir validación adicional</b><div class="muted">Solicitar evidencia del negocio o reforzar identidad.</div></div></div></div>
+                    <div class="event"><div class="left"><div class="dot" style="background:#e1c5ff"></div><div><b>Derivar a educación financiera</b><div class="muted">Cuando el problema es hábitos o presión financiera, no capacidad.</div></div></div></div>
+                  </div>
+                </div>
+                <div class="grid g3" style="margin-top:14px">
+                  <div class="card"><div class="k">Input del oráculo</div><div class="v" style="font-size:24px">Scores + eventos + cohortes</div><div class="muted">Toma señales del monitor y reglas de negocio.</div></div>
+                  <div class="card"><div class="k">Output operativo</div><div class="v" style="font-size:24px">Acción y prioridad</div><div class="muted">Sirve para front, riesgo, cobranza y growth.</div></div>
+                  <div class="card"><div class="k">Aprendizaje</div><div class="v" style="font-size:24px">Feedback loop</div><div class="muted">Cada acción mejora modelos, umbrales y fairness.</div></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  
+    
+  
+
+  <script>
+    const items = document.querySelectorAll('.side-item');
+    const tabs = document.querySelectorAll('.tab');
+    function activateTab(id){
+      tabs.forEach(t=>t.classList.toggle('active', t.id===id));
+      items.forEach(i=>i.classList.toggle('active', i.dataset.tab===id));
+    }
+    items.forEach(i=>i.addEventListener('click',()=>activateTab(i.dataset.tab)));
+    window.activateTab = activateTab;
+  </script>
+
+
+<div data-demoway-ignore="true"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/assets/style-PScpvyXz.css"><div class="pointer-events-none absolute inset-0 size-full"><!-- Remove item from normal navigation flow, only available via hotkey --><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"><ol data-sonner-toaster="" data-sonner-theme="light" class="toaster group pointer-events-auto" dir="ltr" tabindex="-1" data-theme="light" data-rich-colors="true" data-y-position="top" data-x-position="center" style="--front-toast-height: 0px; --width: 356px; --gap: 14px; --normal-bg: inherit; --normal-text: inherit; --normal-border: hsl(var(--border)); --offset-top: 24px; --offset-right: 24px; --offset-bottom: 24px; --offset-left: 24px; --mobile-offset-top: 16px; --mobile-offset-right: 16px; --mobile-offset-bottom: 16px; --mobile-offset-left: 16px;"></ol></section><div class="group/controls flex items-center justify-between indicator pointer-events-auto absolute gap-[16px] overflow-visible rounded-md bg-white px-[12px] py-[8px] invisible" style="left: 20px; bottom: 20px;"><div class="cursor-move"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" class="pointer-events-none text-[18px] text-neutral-700"><path fill="none" stroke="currentColor" stroke-width="2" d="M15 5h2V3h-2zM7 5h2V3H7zm8 8h2v-2h-2zm-8 0h2v-2H7zm8 8h2v-2h-2zm-8 0h2v-2H7z"></path></svg></div><button class="focus-visible:ring-ring relative gap-2 font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-[1em] [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 flex h-[36px] min-w-[36px] items-center justify-center rounded-full [&amp;_svg]:h-[1.2em] [&amp;_svg]:w-[1.2em] !pointer-events-auto w-full px-[16px] text-sm cursor-pointer"><!----><svg viewBox="0 0 16 16" width="1.2em" height="1.2em"><path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8"></path></svg> Start Capturing</button></div><!----><!----><!----><!----></div><!----><!----><!----><!----><div style="display: none;"><iframe title="intermediary" allowtransparency="true" sandbox="allow-same-origin allow-scripts" src="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/src/pages/intermediary/index.html?task_list_border=true"></iframe></div><!----></template></div></body></html>
