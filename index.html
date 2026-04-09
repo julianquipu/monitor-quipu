@@ -4,6 +4,7 @@
   <title>Monitor de Salud Financiera - Quipu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <link href="./css2" rel="stylesheet">
   <style>
     :root {
@@ -15,10 +16,13 @@
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Outfit',system-ui,sans-serif;background:linear-gradient(180deg,var(--bg) 0%, #071d1d 100%);color:var(--text)}
     img{max-width:100%;display:block} button{font:inherit} .container{width:min(1280px,calc(100% - 40px));margin:0 auto}
     .hero-wrap{position:relative;overflow:hidden;background:radial-gradient(circle at 18% 8%, rgba(111,196,173,.18), transparent 24%),radial-gradient(circle at 75% 10%, rgba(255,255,255,.08), transparent 16%),linear-gradient(120deg,#072627 0%, #103f3b 45%, #082728 100%)}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.brand{display:flex;align-items:center;gap:14px;font-weight:700}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(180deg,#9ad9c8,#0f6f6b);position:relative;box-shadow:var(--shadow)}
-    .logo:before,.logo:after{content:"";position:absolute;background:#fff;border-radius:999px}.logo:before{width:8px;height:20px;left:18px;top:10px}.logo:after{width:26px;height:8px;left:9px;bottom:10px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+    .brand{display:flex;align-items:center;gap:14px;font-weight:700}
+    .brand-logo{width:44px;height:44px;border-radius:14px;object-fit:contain;flex-shrink:0;display:block}
+    .brand-text{display:flex;flex-direction:column;line-height:1.2}
     .tag{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(188,233,220,.08);color:var(--mint);font-size:14px}
     .hero{display:grid;grid-template-columns:1.06fr .94fr;gap:32px;align-items:center;padding:26px 0 56px}
+    h1,h2,h3,.headline{font-family:'Poppins',system-ui,sans-serif}
     h1{font-size:clamp(44px,7vw,82px);line-height:.98;margin:14px 0 16px;letter-spacing:-.045em;max-width:11ch}
     .lead{font-size:21px;line-height:1.45;color:#dceee8;max-width:58ch;margin-bottom:22px}
     .btn-row{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:15px 20px;border-radius:16px;border:none;font-weight:700;font-size:15px}.btn-primary{background:linear-gradient(180deg,#1ea39a,#0f6f6b);color:#fff;box-shadow:var(--shadow)} .btn-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18)}
@@ -33,9 +37,9 @@
     .grid{display:grid;gap:14px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
     .card{background:#fff;border:1px solid #e3ece8;border-radius:22px;padding:18px;box-shadow:0 16px 40px rgba(6,43,43,.05)} .dark{background:linear-gradient(135deg,#0f6f6b,#083634);color:#fff;border:none}
     .score-card{padding:22px;border-radius:26px;background:linear-gradient(135deg,#0f6f6b,#073b3a);color:#fff;box-shadow:var(--shadow)} .score-flex{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-    .score-num{font-size:86px;line-height:.9;font-weight:800;letter-spacing:-.05em}.score-sub{color:#d3ece5}.trend{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px}
+    .score-num{font-size:86px;line-height:.9;font-weight:800;letter-spacing:-.05em;font-family:'Poppins',system-ui,sans-serif}.score-sub{color:#d3ece5}.trend{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px}
     .pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pill{padding:8px 10px;border-radius:999px;font-size:12px;font-weight:700}.ok{background:#daf6ea;color:#0a6b47}.warn{background:#fff0d8;color:#9a5d00}.danger{background:#ffe0df;color:#a13b3b}
-    .k{font-size:12px;color:#6b7676;text-transform:uppercase;letter-spacing:.08em}.v{font-size:30px;font-weight:800;letter-spacing:-.03em;margin-top:4px}.muted{color:#667070;line-height:1.45}
+    .k{font-size:12px;color:#6b7676;text-transform:uppercase;letter-spacing:.08em}.v{font-size:30px;font-weight:800;letter-spacing:-.03em;margin-top:4px;font-family:'Poppins',system-ui,sans-serif}.muted{color:#667070;line-height:1.45}
     .bar{height:10px;background:#e7efec;border-radius:999px;overflow:hidden;margin-top:8px}.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#f08b73,#0f8a82)}
     .event{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #edf2ef}.event:last-child{border-bottom:none}.event .left{display:flex;gap:12px}.dot{width:12px;height:12px;border-radius:50%;margin-top:6px}
     table{width:100%;border-collapse:collapse} th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf2ef;font-size:14px} th{color:#647171;font-weight:700} .badge{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;display:inline-block}
@@ -79,7 +83,13 @@
   <header class="hero-wrap">
     <div class="container">
       <nav class="nav">
-        <div class="brand"><img src="./logo-v2.png" alt="Quipu" style="width:44px;height:44px;border-radius:14px;object-fit:contain;">QuipuScore<br><span style="font-weight:400;color:var(--muted)">Monitor de Salud Financiera</span></div></div>
+        <div class="brand">
+          <img src="./logo-v2.png" alt="Quipu" class="brand-logo">
+          <div class="brand-text">
+            <span>QuipuScore</span>
+            <span style="font-weight:400;color:var(--muted);font-size:14px">Monitor de Salud Financiera</span>
+          </div>
+        </div>
         <div class="tag">Versión 1.0 • Demo Navegable</div>
       </nav>
       <section class="hero">
@@ -262,3 +272,4 @@
     window.activateTab = activateTab;
   </script>
 </body></html>
+ 
