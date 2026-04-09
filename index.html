@@ -61,9 +61,31 @@
   .board-top{flex-direction:column;align-items:flex-start;gap:10px}
   .tab-head{flex-direction:column}
 }
-    @media (max-width:1100px){.hero,.board-shell{grid-template-columns:1fr}.metric-strip,.g4,.g3{grid-template-columns:1fr 1fr}.sidebar{order:2}.content{order:1}}
-    @media (max-width:700px){.container{width:min(100% - 20px,1280px)}.metric-strip,.g4,.g3,.g2,.img-wall{grid-template-columns:1fr}.tab-head{flex-direction:column}.tab-head h2{font-size:30px}h1{font-size:46px}.board{padding:12px}.content{padding:14px}}
-  </style>
+   @media (max-width:1280px){
+  .hero{grid-template-columns:1fr;gap:24px}
+  .board-shell{grid-template-columns:200px 1fr}
+  .tab-head h2{font-size:30px}
+  .headline{font-size:clamp(32px,4vw,52px)}
+  h1{font-size:clamp(38px,6vw,72px)}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .metric-strip{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1100px){
+  .board-shell{grid-template-columns:1fr}
+  .sidebar{order:2}
+  .content{order:1}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .board-top{flex-direction:column;align-items:flex-start;gap:10px}
+  .tab-head{flex-direction:column}
+  .g3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .container{width:calc(100% - 20px)}
+  .metric-strip,.g4,.g3,.g2,.img-wall{grid-template-columns:1fr}
+  .tab-head h2{font-size:26px}
+  h1{font-size:38px}
+  .content{padding:14px}
+}
 <script src="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/assets/main-world.ts-B0-0X4eu.js" type="module"></script></head>
 <body data-demoway-document-id="ckmcp2j81vbjnwlah32p9gse">
   <header class="hero-wrap">
