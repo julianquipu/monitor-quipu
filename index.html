@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0067)file:///Users/analuciaesv/Downloads/monitor-salud-financiera-2.html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monitor de Salud Financiera - Quipu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./css2">
+  <link href="./css2" rel="stylesheet">
   <style>
     :root {
       --bg:#062b2b; --bg-2:#0d3a38; --panel:#0f6f6b; --panel-2:#0c5855; --mint:#bce9dc; --mint-2:#dff5ee;
@@ -49,45 +47,35 @@
     .img-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.img-wall img{width:100%;height:116px;object-fit:cover;border-radius:18px}
     .palette{display:flex;gap:10px;flex-wrap:wrap}.sw{width:54px;height:54px;border-radius:16px;border:1px solid #dce8e4}
     .footer-note{padding:24px 0 46px;color:#7a8a89;font-size:14px}
+ 
     @media (max-width:1280px){
-  .board-shell{grid-template-columns:200px 1fr}
-  .tab-head h2{font-size:30px}
-  .headline{font-size:clamp(32px,4vw,52px)}
-  h1{font-size:clamp(38px,6vw,72px)}
-  .g4{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:1100px){
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .board-top{flex-direction:column;align-items:flex-start;gap:10px}
-  .tab-head{flex-direction:column}
-}
-   @media (max-width:1280px){
-  .hero{grid-template-columns:1fr;gap:24px}
-  .board-shell{grid-template-columns:200px 1fr}
-  .tab-head h2{font-size:30px}
-  .headline{font-size:clamp(32px,4vw,52px)}
-  h1{font-size:clamp(38px,6vw,72px)}
-  .g4{grid-template-columns:repeat(2,1fr)}
-  .metric-strip{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:1100px){
-  .board-shell{grid-template-columns:1fr}
-  .sidebar{order:2}
-  .content{order:1}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .board-top{flex-direction:column;align-items:flex-start;gap:10px}
-  .tab-head{flex-direction:column}
-  .g3{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:700px){
-  .container{width:calc(100% - 20px)}
-  .metric-strip,.g4,.g3,.g2,.img-wall{grid-template-columns:1fr}
-  .tab-head h2{font-size:26px}
-  h1{font-size:38px}
-  .content{padding:14px}
-}
-<script src="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/assets/main-world.ts-B0-0X4eu.js" type="module"></script></head>
-<body data-demoway-document-id="ckmcp2j81vbjnwlah32p9gse">
+      .hero{grid-template-columns:1fr;gap:24px}
+      .board-shell{grid-template-columns:200px 1fr}
+      .metric-strip{grid-template-columns:repeat(2,1fr)}
+      .g4{grid-template-columns:repeat(2,1fr)}
+      .tab-head h2{font-size:30px}
+      h1{font-size:clamp(38px,6vw,72px)}
+      .headline{font-size:clamp(32px,4vw,52px)}
+    }
+    @media (max-width:1100px){
+      .board-shell{grid-template-columns:1fr}
+      .sidebar{order:2}
+      .content{order:1}
+      .g3{grid-template-columns:repeat(2,1fr)}
+      .board-top{flex-direction:column;align-items:flex-start;gap:10px}
+      .tab-head{flex-direction:column}
+      table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    }
+    @media (max-width:700px){
+      .container{width:calc(100% - 20px)}
+      .metric-strip,.g4,.g3,.g2,.img-wall{grid-template-columns:1fr}
+      .tab-head h2{font-size:26px}
+      h1{font-size:38px}
+      .content{padding:14px}
+    }
+  </style>
+</head>
+<body>
   <header class="hero-wrap">
     <div class="container">
       <nav class="nav">
@@ -100,8 +88,8 @@
           <h1>Del dato alternativo al siguiente mejor movimiento</h1>
           <p class="lead">Una infraestructura que observa el presente, aprende con cada interacción y conecta a las personas con mejores productos financieros.</p>
           <div class="btn-row">
-            <button class="btn btn-primary" onclick="activateTab(&#39;perfil&#39;)">Abrir demo</button>
-            <button class="btn btn-secondary" onclick="document.getElementById(&#39;demo&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Ver navegación</button>
+            <button class="btn btn-primary" onclick="activateTab('perfil')">Abrir demo</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Ver navegación</button>
           </div>
           <div class="metric-strip">
             <div class="mini"><b>4</b><span>Tipo de análisis con decisiones clave</span></div>
@@ -170,7 +158,7 @@
                   </div>
                 </div>
               </div>
-
+ 
               <div id="cohortes" class="tab">
                 <div class="tab-head">
                   <div><h2>Cohortes</h2><p>Panel para comparar segmentos y ver dónde se concentra la mejora o el deterioro. Sirve para originación, aprendizaje de producto y monitoreo de impacto.</p></div>
@@ -199,7 +187,7 @@
                   <div class="card"><div class="k">Top oportunidad</div><div class="v" style="font-size:24px">Reintentar originación</div><div class="muted">Usuarios rechazados que mejoran 14-30 días: Juan Pérez, Lisandra Osorio</div></div>
                 </div>
               </div>
-
+ 
               <div id="alertas" class="tab">
                 <div class="tab-head">
                   <div><h2>Alertas</h2><p>Centro operativo para priorizar deterioros, eventos de mora, riesgo de fraude y cambios abruptos de comportamiento. La idea es actuar antes del daño.</p></div>
@@ -227,7 +215,7 @@
                   <div class="card"><div class="k">Regla de negocio</div><div class="muted" style="margin-top:10px">Si el score cae más de 8 puntos en 14 días o si la mora aparece junto con caída del flujo, elevar a intervención humana. Si mejora por 3 semanas, pasar a cola de reactivación.</div></div>
                 </div>
               </div>
-
+ 
               <div id="oraculo" class="tab">
                 <div class="tab-head">
                   <div><h2>Oráculo Quipu</h2><p>La capa que transforma el monitor en decisión. No solo observa; recomienda qué hacer después con cada usuario, segmento o evento detectado.</p></div>
@@ -262,11 +250,7 @@
       </section>
     </div>
   </header>
-
-  
-    
-  
-
+ 
   <script>
     const items = document.querySelectorAll('.side-item');
     const tabs = document.querySelectorAll('.tab');
@@ -277,6 +261,4 @@
     items.forEach(i=>i.addEventListener('click',()=>activateTab(i.dataset.tab)));
     window.activateTab = activateTab;
   </script>
-
-
-<div data-demoway-ignore="true"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/assets/style-PScpvyXz.css"><div class="pointer-events-none absolute inset-0 size-full"><!-- Remove item from normal navigation flow, only available via hotkey --><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"><ol data-sonner-toaster="" data-sonner-theme="light" class="toaster group pointer-events-auto" dir="ltr" tabindex="-1" data-theme="light" data-rich-colors="true" data-y-position="top" data-x-position="center" style="--front-toast-height: 0px; --width: 356px; --gap: 14px; --normal-bg: inherit; --normal-text: inherit; --normal-border: hsl(var(--border)); --offset-top: 24px; --offset-right: 24px; --offset-bottom: 24px; --offset-left: 24px; --mobile-offset-top: 16px; --mobile-offset-right: 16px; --mobile-offset-bottom: 16px; --mobile-offset-left: 16px;"></ol></section><div class="group/controls flex items-center justify-between indicator pointer-events-auto absolute gap-[16px] overflow-visible rounded-md bg-white px-[12px] py-[8px] invisible" style="left: 20px; bottom: 20px;"><div class="cursor-move"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" class="pointer-events-none text-[18px] text-neutral-700"><path fill="none" stroke="currentColor" stroke-width="2" d="M15 5h2V3h-2zM7 5h2V3H7zm8 8h2v-2h-2zm-8 0h2v-2H7zm8 8h2v-2h-2zm-8 0h2v-2H7z"></path></svg></div><button class="focus-visible:ring-ring relative gap-2 font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-[1em] [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 flex h-[36px] min-w-[36px] items-center justify-center rounded-full [&amp;_svg]:h-[1.2em] [&amp;_svg]:w-[1.2em] !pointer-events-auto w-full px-[16px] text-sm cursor-pointer"><!----><svg viewBox="0 0 16 16" width="1.2em" height="1.2em"><path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1M2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8"></path></svg> Start Capturing</button></div><!----><!----><!----><!----></div><!----><!----><!----><!----><div style="display: none;"><iframe title="intermediary" allowtransparency="true" sandbox="allow-same-origin allow-scripts" src="chrome-extension://amcccnldajjnngnaoinemnaloklogjak/src/pages/intermediary/index.html?task_list_border=true"></iframe></div><!----></template></div></body></html>
+</body></html>
